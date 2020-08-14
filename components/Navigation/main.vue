@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Side class="hidden" />
-    <Small />
+    <Side class="" />
+    <Small class="hidden" />
   </div>
 </template>
 <script>

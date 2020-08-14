@@ -31,7 +31,7 @@ export default {
    */
   css: [
     '~/assets/css/main.css',
-    '~assets/css/animation.css',
+    '~assets/css/animations.css',
     '~/assets/fonts/css/all.css',
   ],
   /*

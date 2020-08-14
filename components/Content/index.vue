@@ -5,7 +5,7 @@
         <Nav />
       </div>
       <div>
-        <Text />
+        <Texter />
       </div>
       <div>
         <Rate />
@@ -24,7 +24,7 @@
 </template>
 <script>
 import Nav from './topNav'
-import Text from './text'
+import Texter from './text'
 import Rate from './rate'
 import Graph from './graph'
 import Status from './status'
@@ -32,7 +32,7 @@ import Todo from './todo'
 export default {
   components: {
     Nav,
-    Text,
+    Texter,
     Rate,
     Graph,
     Status,

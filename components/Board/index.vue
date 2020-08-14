@@ -7,7 +7,7 @@
       <div class="bg-white lg:hidden block">
         <MobileNav />
       </div>
-      <div class="flex-grow bg-gray-700 p-12">
+      <div class="flex-grow bg-gray-200 p-12 min-h-screen">
         <Main />
       </div>
     </div>

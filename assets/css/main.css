@@ -11,10 +11,7 @@
 	--main-font: "Euclid Circular";
 } */
 
-@font-face {
-  font-family: "Euclid Circular";
-  src: url("./fonts/EuclidCircularA-Regular.ttf") format("truetype");
-}
+
 
 .container {
   padding-top: 40px;
@@ -254,4 +251,8 @@
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.5rem;
+}
+
+.form {
+  color: #F3A4B5;
 }
