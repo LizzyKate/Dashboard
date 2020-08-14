@@ -3,14 +3,12 @@
     <Index />
   </div>
 </template>
-
 <script>
-import Index from '~/components/Board/index'
+import Index from '../Graph/index'
 export default {
   components: {
     Index,
   },
 }
 </script>
-
-<style></style>
+<style scoped></style>

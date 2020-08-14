@@ -1,16 +1,14 @@
 <template>
   <div>
-    <Index />
+    <Main />
   </div>
 </template>
-
 <script>
-import Index from '~/components/Board/index'
+import Main from './main'
 export default {
   components: {
-    Index,
+    Main,
   },
 }
 </script>
-
-<style></style>
+<style scoped></style>
