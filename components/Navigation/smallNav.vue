@@ -4,6 +4,9 @@
       <div class="p-3 mt-8">
         <i class="fas fa-bars"></i>
       </div>
+      <div class="p-3 text-info">
+        <i class="fas fa-home"></i>
+      </div>
       <div class="p-3 text-warning">
         <i class="far fa-copy"></i>
       </div>
