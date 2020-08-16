@@ -1,9 +1,10 @@
 <template>
   <div>
     <!-- component -->
-    <div class="md:flex flex-col md:flex-row min-h-screen w-full">
+    <div class="flex flex-col min-h-screen w-full relative">
       <div
-        class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0"
+        class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0 min-h-screen"
+        :class="{ absolute: !changed, relative: changed, 'z-30': !changed }"
       >
         <div
           class="flex-shrink-0 px-6 py-8 flex flex-row items-center justify-between"
@@ -67,14 +68,25 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-row justify-between items-center">
-            <div class="p-2 flex flex-row">
-              <div class="text-danger">
-                <i class="far fa-calendar-alt"></i>
-              </div>
-              <div class="text-default ml-4">
-                <h5 class="">Calendar</h5>
-              </div>
+
+          <div class="p-2 flex flex-row">
+            <div class="text-danger">
+              <i class="far fa-calendar-alt"></i>
+            </div>
+            <div class="text-default ml-4">
+              <h5 class="">Calendar</h5>
+            </div>
+          </div>
+
+          <div
+            class="p-3 border border-gray-700 border-solid w-full border-t-0 border-r-0 border-l-0 border-opacity-50"
+          ></div>
+          <div v-for="(item, b) in below" :key="b" class="p-2 flex flex-row">
+            <div>
+              <i :class="item.fonts"></i>
+            </div>
+            <div class="text-default ml-4">
+              <h5 class="">{{ item.content }}</h5>
             </div>
           </div>
         </nav>
@@ -132,6 +144,24 @@ export default {
           open: false,
         },
       ],
+      below: [
+        {
+          fonts: 'text-default fas fa-plane-departure',
+          content: 'Getting Started',
+        },
+        {
+          fonts: 'text-default fas fa-fan',
+          content: 'Foundation',
+        },
+        {
+          fonts: 'text-default fas fa-cubes',
+          content: 'Component',
+        },
+        {
+          fonts: 'text-default fas fa-globe',
+          content: 'Plugins',
+        },
+      ],
     }
   },
   computed: {
@@ -150,7 +180,6 @@ export default {
     },
     paste() {
       this.$store.commit('nav/stayed')
-      console.log('I am clicked')
     },
   },
 }
