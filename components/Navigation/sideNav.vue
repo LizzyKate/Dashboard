@@ -13,10 +13,10 @@
             <h3 class="text-green-600 text-lg font-bold">Argon</h3>
           </div>
           <div class="ml-auto" @click="paste()">
-            <div v-if="!changed">
+            <div v-if="!changed" class="lg:block hidden">
               <i class="fas fa-bars"></i>
             </div>
-            <div v-else>
+            <div v-else class="lg:block hidden">
               <i class="fas fa-align-right"></i>
             </div>
           </div>
@@ -81,7 +81,11 @@
           <div
             class="p-3 border border-gray-700 border-solid w-full border-t-0 border-r-0 border-l-0 border-opacity-50"
           ></div>
-          <div v-for="(item, b) in below" :key="b" class="p-2 flex flex-row">
+          <div
+            v-for="(item, b) in below"
+            :key="b + item.content"
+            class="p-2 flex flex-row"
+          >
             <div>
               <i :class="item.fonts"></i>
             </div>

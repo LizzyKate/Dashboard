@@ -2,9 +2,9 @@
   <div>
     <div class="relative">
       <div
-        class="flex flex-row bg-white justify-between items-center w-screen px-4"
+        class="flex flex-row bg-gray-200 justify-between items-center w-screen px-4"
       >
-        <div class="flex flex-row bg-white justify-between items-center">
+        <div class="flex flex-row justify-between items-center">
           <div class="p-4 text-default" @click="play()">
             <i class="fas fa-bars"></i>
           </div>
@@ -40,42 +40,50 @@
 
             <div
               v-show="open"
-              class="origin-top-right absolute mt-10 w-56 rounded-md shadow-lg"
+              class="origin-top-right second absolute mt-10 add rounded-md shadow-lg"
             >
               <div class="rounded-md bg-white shadow-xs">
                 <div
-                  class="py-1"
+                  class="p-3 flex flex-col"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
                 >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
-                    role="menuitem"
-                    >Account settings</a
-                  >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
-                    role="menuitem"
-                    >Support</a
-                  >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
-                    role="menuitem"
-                    >License</a
-                  >
-                  <form method="POST" action="#">
-                    <button
-                      type="submit"
-                      class="block w-full text-left px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
-                      role="menuitem"
-                    >
-                      Sign out
-                    </button>
-                  </form>
+                  <div class="mb-4">
+                    <p class="text-gray-700 font-medium text-sm">
+                      You have <b class="text-primary">13</b> notifications
+                    </p>
+                  </div>
+                  <div v-for="(note, f) in notify" :key="f" class="py-4">
+                    <div class="flex flex-row">
+                      <div>
+                        <img
+                          :src="`/img/${note.image}`"
+                          class="rounded-full border-0 __profiling"
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex-col flex ml-4 spec w-full">
+                        <h6 class="text-default text-sm font-semibold mb-1">
+                          {{ note.name }}
+                        </h6>
+                        <p class="text-gray-600 text-sm">
+                          {{ note.test }}
+                        </p>
+                      </div>
+                      <div>
+                        <p class="text-sm text-gray-600">{{ note.time }}</p>
+                      </div>
+                    </div>
+                    <div
+                      class="border mt-4 border-gray-700 border-solid w-full border-t-0 border-r-0 border-l-0 border-opacity-50"
+                    ></div>
+                  </div>
+                  <div>
+                    <p class="text-primary text-base font-semibold text-center">
+                      View all
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -89,7 +97,7 @@
                   class="flex items-center focus:outline-none transition ease-in-out duration-150"
                   aria-haspopup="true"
                   aria-expanded="true"
-                  @click="show()"
+                  @click="hide()"
                 >
                   <i class="far fa-copy"></i>
                   <svg
@@ -108,43 +116,80 @@
             </div>
 
             <div
-              v-show="open"
-              class="origin-top-right absolute second mt-10 w-56 rounded-md shadow-lg"
+              v-show="close"
+              class="origin-top-right absolute adding third mt-10 rounded-md shadow-lg"
             >
-              <div class="rounded-md bg-white shadow-xs">
+              <div class="rounded-md bg-default shadow-xs">
                 <div
-                  class="py-1"
+                  class="p-4 flex flex-col"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
                 >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
-                    role="menuitem"
-                    >Account settings</a
-                  >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
-                    role="menuitem"
-                    >Support</a
-                  >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
-                    role="menuitem"
-                    >License</a
-                  >
-                  <form method="POST" action="#">
-                    <button
-                      type="submit"
-                      class="block w-full text-left px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
-                      role="menuitem"
-                    >
-                      Sign out
-                    </button>
-                  </form>
+                  <div class="flex flex-row justify-between items-center mt-4">
+                    <div class="flex flex-col items-center">
+                      <div
+                        class="rounded-full bg-danger text-center text-white icon"
+                      >
+                        <i class="far fa-calendar-alt boost"></i>
+                      </div>
+                      <div class="text-white font inc-bold mt-2">
+                        <h6>Calendar</h6>
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <div
+                        class="rounded-full bg-warning text-center text-white icon"
+                      >
+                        <i class="fas fa-envelope boost"></i>
+                      </div>
+                      <div class="text-white inc font-bold mt-2">
+                        <h6>Message</h6>
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <div
+                        class="rounded-full bg-primary text-center text-white icon"
+                      >
+                        <i class="fas fa-credit-card boost"></i>
+                      </div>
+                      <div class="text-white fo incnt-bold mt-2">
+                        <h6>Payment</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-row justify-between items-center my-8">
+                    <div class="flex flex-col items-center">
+                      <div
+                        class="rounded-full bg-success text-center text-white icon"
+                      >
+                        <i class="fas fa-receipt boost"></i>
+                      </div>
+                      <div class="text-white inc font-bold mt-2">
+                        <h6>Report</h6>
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <div
+                        class="rounded-full bg-purple-600 text-center text-white icon"
+                      >
+                        <i class="fas fa-map-marker-alt boost"></i>
+                      </div>
+                      <div class="text-white font- incbold mt-2">
+                        <h6>Map</h6>
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <div
+                        class="rounded-full bg-yellow-500 text-center text-white icon"
+                      >
+                        <i class="fas fa-shopping-basket boost"></i>
+                      </div>
+                      <div class="text-white font-b incold mt-2">
+                        <h6>Shop</h6>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -152,13 +197,16 @@
         </div>
         <div class="p-4">
           <img
-            src="img/profile-small-1.jpg"
+            src="/img/profile-small-1.jpg"
             class="rounded-full border-0 __profile"
             alt=""
           />
         </div>
       </div>
-      <div v-show="side" class="absolute w-64 top-0 z-30">
+      <div
+        class="border border-gray-700 border-solid w-full border-t-0 border-r-0 border-l-0 border-opacity-50"
+      ></div>
+      <div v-show="side" class="fixed w-64 top-0 z-30">
         <Side />
       </div>
     </div>
@@ -173,6 +221,39 @@ export default {
   data() {
     return {
       open: false,
+      close: false,
+      notify: [
+        {
+          image: 'profile-small-1.jpg',
+          time: 2 + ' hrs ago',
+          name: 'Jhon Snow',
+          test: 'Let"s meet at Starbucks at 11:30. Wydt',
+        },
+        {
+          image: 'profile-small-5.jpg',
+          time: 2 + ' hrs ago',
+          name: 'Jhon Snow',
+          test: 'A new issue has been reported for Argon',
+        },
+        {
+          image: 'profile-small-6.jpg',
+          time: 2 + ' hrs ago',
+          name: 'Jhon Snow',
+          test: 'Your Post have been liked a lot',
+        },
+        {
+          image: 'profile-small-9.jpg',
+          time: 2 + ' hrs ago',
+          name: 'Jhon Snow',
+          test: 'Let"s meet at Starbucks at 11:30. Wydt',
+        },
+        {
+          image: 'profile-small-15.jpg',
+          time: 2 + ' hrs ago',
+          name: 'Jhon Snow',
+          test: 'Let"s meet at Starbucks at 11:30. Wydt',
+        },
+      ],
     }
   },
   computed: {
@@ -183,6 +264,15 @@ export default {
   methods: {
     show() {
       this.open = !this.open
+      if (this.open) {
+        this.close = false
+      }
+    },
+    hide() {
+      this.close = !this.close
+      if (this.close) {
+        this.open = false
+      }
     },
     play() {
       this.$store.commit('mobile/appear')
@@ -194,9 +284,82 @@ export default {
 .second {
   left: -48px;
 }
+.third {
+  left: -130px;
+}
 .__profile {
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+.icon {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+.__profiling {
+  width: 50px;
+  height: 35px;
+  cursor: pointer;
+}
+.add {
+  width: 18rem;
+  height: 500px;
+  overflow-y: scroll;
+}
+.adding {
+  width: 18rem;
+}
+.boost {
+  font-size: 1.5rem;
+  margin-top: 1.25rem;
+}
+.inc h6 {
+  font-size: 1rem;
+}
+@media screen and (max-width: 320px) {
+  .add {
+    width: 12rem;
+  }
+  .adding {
+    width: 16rem;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .boost {
+    font-size: 1rem;
+    margin-top: 0.75rem;
+  }
+  .inc h6 {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 290px) {
+  .adding {
+    width: 14rem;
+  }
+  .boost {
+    font-size: 1rem;
+    margin-top: 0.75rem;
+  }
+  .inc h6 {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (min-width: 450px) {
+  .add,
+  .adding {
+    width: 24rem !important;
+  }
+  .__profiling {
+    width: 70px;
+    height: 65px;
+  }
+  .spec {
+    width: 75%;
+  }
 }
 </style>
