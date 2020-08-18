@@ -1,22 +1,22 @@
 <template>
   <div>
     <div class="flex flex-col">
-      <div class="lg:flex hidden">
+      <div class="lg:flex justify-between items-center hidden">
         <Nav />
       </div>
-      <div>
+      <div class="px-12">
         <Texter />
       </div>
-      <div>
+      <div class="px-12">
         <Rate />
       </div>
-      <div>
+      <div class="px-12">
         <Graph />
       </div>
-      <div>
+      <div class="px-12">
         <Status />
       </div>
-      <div>
+      <div class="px-12">
         <Todo />
       </div>
     </div>

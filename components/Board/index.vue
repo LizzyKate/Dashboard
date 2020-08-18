@@ -4,7 +4,8 @@
       <div class="bg-white lg:block hidden">
         <Navigation />
       </div>
-      <div class="flex-grow bg-gray-200 p-12 min-h-screen lg:block hidden">
+      <div class="flex-grow bg-gray-200 min-h-screen lg:block hidden">
+        <!-- p-12 -->
         <Main />
       </div>
     </div>

@@ -7,7 +7,7 @@
         :class="{ absolute: !changed, relative: changed, 'z-30': !changed }"
       >
         <div
-          class="flex-shrink-0 px-6 py-8 flex flex-row items-center justify-between"
+          class="flex-shrink-0 px-6 pt-8 pb-4 flex flex-row items-center justify-between"
         >
           <div class="">
             <h3 class="text-green-600 text-lg font-bold">Argon</h3>
