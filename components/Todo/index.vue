@@ -1,9 +1,18 @@
 <template>
   <div>
-    <div class="lg:flex lg:flex-row lg:justify-between lg:items-center block">
+    <div
+      class="lg:flex lg:flex-row lg:justify-between lg:items-center block mt-6 mb-8"
+    >
       <div>
-        <Team />
+        <Team class="lg:block hidden" />
+      </div>
+      <div>
+        <mobileTeam class="lg:hidden block" />
+      </div>
+      <div>
         <Todo />
+      </div>
+      <div>
         <Progress />
       </div>
     </div>
@@ -13,11 +22,13 @@
 import Team from './team'
 import Todo from './todo'
 import Progress from './progress'
+import mobileTeam from './mobileTeam'
 export default {
   components: {
     Team,
     Todo,
     Progress,
+    mobileTeam,
   },
 }
 </script>

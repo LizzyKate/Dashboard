@@ -3,11 +3,7 @@
     class="lg:flex lg:flex-row block lg:justify-between lg:items-center mt-6"
   >
     <div v-for="(con, i) in property" :key="i">
-      <div
-        class="p-4 text-white flex flex-col mt-0 card"
-        :class="con.gradient"
-        :style="{ width: changed ? '13rem' : '16rem' }"
-      >
+      <div class="w-full p-4 text-white ml-0 mt-4 card" :class="con.gradient">
         <div class="flex flex-row justify-between items-center">
           <div class="flex-grow">
             <h6 class="font-sm font-semibold">{{ con.title }}</h6>

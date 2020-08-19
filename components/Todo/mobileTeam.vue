@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div
-      class="card card-deck bg-white flex flex col"
-      :style="{ width: changed ? '18rem' : '23rem' }"
-    >
+    <div class="card w-full bg-white flex flex col">
       <div class="p-4">
         <h5 class="text-default font-semibold text-base">Team Members</h5>
       </div>
@@ -89,9 +86,6 @@ export default {
 }
 </script>
 <style scoped>
-.card-deck {
-  width: 23rem;
-}
 .__profile {
   width: 50px;
   height: 50px;
@@ -99,10 +93,5 @@ export default {
 }
 .sucess {
   margin-top: 0.64rem;
-}
-@media screen and (max-width: 800px) {
-  .card-deck {
-    width: 100%;
-  }
 }
 </style>

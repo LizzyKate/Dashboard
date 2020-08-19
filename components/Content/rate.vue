@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Index />
+    <Task />
   </div>
 </template>
 <script>
-import Index from '../Rate/index'
+import Task from '../Rate/task'
 export default {
   components: {
-    Index,
+    Task,
   },
 }
 </script>
