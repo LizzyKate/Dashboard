@@ -1,7 +1,22 @@
 <template>
-  <div></div>
+  <div>
+    <NewTask :con="contact" />
+  </div>
 </template>
 <script>
-export default {}
+import NewTask from './task'
+export default {
+  components: {
+    NewTask,
+  },
+  data() {
+    return {}
+  },
+  computed: {
+    contact() {
+      return this.$store.state.rate.contact
+    },
+  },
+}
 </script>
 <style scoped></style>

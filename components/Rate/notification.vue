@@ -1,7 +1,24 @@
 <template>
-  <div></div>
+  <div>
+    <Notify :con="notification" :page="page" />
+  </div>
 </template>
 <script>
-export default {}
+import Notify from './task'
+export default {
+  components: {
+    Notify,
+  },
+  data() {
+    return {
+      page: 'notify',
+    }
+  },
+  computed: {
+    notification() {
+      return this.$store.state.rate.notification
+    },
+  },
+}
 </script>
 <style scoped></style>

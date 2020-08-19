@@ -1,7 +1,22 @@
 <template>
-  <div></div>
+  <div>
+    <List :con="item" />
+  </div>
 </template>
 <script>
-export default {}
+import List from './task'
+export default {
+  components: {
+    List,
+  },
+  data() {
+    return {}
+  },
+  computed: {
+    item() {
+      return this.$store.state.rate.item
+    },
+  },
+}
 </script>
 <style scoped></style>

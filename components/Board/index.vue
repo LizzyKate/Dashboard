@@ -13,10 +13,7 @@
       <div class="bg-white lg:hidden flex">
         <MobileNav />
       </div>
-      <div
-        class="lg:hidden block bg-gray-200 p-12 min-h-screen"
-        @click="pause()"
-      >
+      <div class="lg:hidden block bg-gray-200 min-h-screen" @click="pause()">
         <Main />
       </div>
     </div>

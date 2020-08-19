@@ -4,19 +4,19 @@
       <div class="lg:flex justify-between items-center hidden">
         <Nav />
       </div>
-      <div class="px-12">
+      <div class="lg:px-12 px-4">
         <Texter />
       </div>
-      <div class="px-12">
+      <div class="lg:px-12 px-4">
         <Rate />
       </div>
-      <div class="px-12">
+      <div class="lg:px-12 px-4">
         <Graph />
       </div>
-      <div class="px-12">
+      <div class="lg:px-12 px-4">
         <Status />
       </div>
-      <div class="px-12">
+      <div class="lg:px-12 px-4">
         <Todo />
       </div>
     </div>

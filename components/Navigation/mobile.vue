@@ -40,7 +40,7 @@
 
             <div
               v-show="open"
-              class="origin-top-right second absolute mt-10 add rounded-md shadow-lg"
+              class="origin-top-right second z-30 absolute mt-10 add rounded-md shadow-lg"
             >
               <div class="rounded-md bg-white shadow-xs">
                 <div
@@ -117,7 +117,7 @@
 
             <div
               v-show="close"
-              class="origin-top-right absolute adding third mt-10 rounded-md shadow-lg"
+              class="origin-top-right absolute z-30 adding third mt-10 rounded-md shadow-lg"
             >
               <div class="rounded-md bg-default shadow-xs">
                 <div
@@ -220,8 +220,6 @@ export default {
   },
   data() {
     return {
-      open: false,
-      close: false,
       notify: [
         {
           image: 'profile-small-1.jpg',
@@ -260,20 +258,22 @@ export default {
     side() {
       return this.$store.state.mobile.side
     },
+    open() {
+      return this.$store.state.mobile.open
+    },
+    close() {
+      return this.$store.state.mobile.close
+    },
   },
   methods: {
     show() {
-      this.open = !this.open
-      if (this.open) {
-        this.close = false
-      }
+      this.$store.commit('mobile/show')
     },
+
     hide() {
-      this.close = !this.close
-      if (this.close) {
-        this.open = false
-      }
+      this.$store.commit('mobile/hide')
     },
+
     play() {
       this.$store.commit('mobile/appear')
     },
