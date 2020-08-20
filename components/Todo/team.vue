@@ -5,7 +5,7 @@
         <h5 class="text-default font-semibold text-base">Team Members</h5>
       </div>
       <div
-        class="border border-gray-700 border-solid w-full border-t-0 border-r-0 border-l-0 border-opacity-50"
+        class="border border-gray-700 border-solid w-full border-t-0 border-r-0 border-l-0 border-opacity-25"
       ></div>
       <div v-for="(member, i) in team" :key="i" class="p-5">
         <div class="flex flex-row justify-between items-center">
