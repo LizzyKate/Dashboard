@@ -9,7 +9,7 @@
       <div class="lg:w-1/3 w-full lg:-mx-5 lg:mt-0 mt-5">
         <Todo class="lg:px-5" />
       </div>
-      <div class="lg:w-1/3 w-full lg:-mx-5">
+      <div class="lg:w-1/3 w-full lg:-mx-5 lg:mt-0 mt-5">
         <Progress class="lg:px-5" />
       </div>
     </div>

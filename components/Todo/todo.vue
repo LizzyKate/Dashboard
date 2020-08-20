@@ -15,24 +15,23 @@
               class="w-4 h-12 border-3 border-solid border-r-0 border-t-0 border-b-0 border-opacity-100"
               :class="item.color"
             ></div>
-            <div>
-              <div class="ml-4 flex flex-col">
-                <div>
-                  <h6
-                    class="text-gray-800 font-sm font-semibold"
-                    :class="item.check ? item.text : null"
-                  >
-                    {{ item.task }}
-                  </h6>
-                </div>
-                <div class="">
-                  <p
-                    class="font-xs text-gray-700 font-light"
-                    :class="item.check ? item.text : null"
-                  >
-                    {{ item.time }}
-                  </p>
-                </div>
+
+            <div class="ml-4 flex flex-col">
+              <div>
+                <h6
+                  class="text-gray-800 font-sm font-semibold"
+                  :class="item.check ? item.text : null"
+                >
+                  {{ item.task }}
+                </h6>
+              </div>
+              <div class="">
+                <p
+                  class="font-xs text-gray-700 font-light"
+                  :class="item.check ? item.text : null"
+                >
+                  {{ item.time }}
+                </p>
               </div>
             </div>
           </div>
