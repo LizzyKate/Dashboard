@@ -1,6 +1,12 @@
 module.exports = {
   theme: {
     extend: {
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1040px',
+        xl: '1280px',
+      },
       colors: {
         default: '#172b4d',
         primary: '#5e72e4',

@@ -3,17 +3,14 @@
     <div
       class="lg:flex lg:flex-row lg:justify-between lg:items-center block mt-6 mb-8"
     >
-      <div>
-        <Team class="lg:block hidden" />
+      <div class="lg:w-1/3 w-full lg:-mx-5">
+        <Team class="lg:px-5" />
       </div>
-      <div>
-        <mobileTeam class="lg:hidden block" />
+      <div class="lg:w-1/3 w-full lg:-mx-5">
+        <Todo class="lg:px-5" />
       </div>
-      <div>
-        <Todo />
-      </div>
-      <div>
-        <Progress />
+      <div class="lg:w-1/3 w-full lg:-mx-5">
+        <Progress class="lg:px-5" />
       </div>
     </div>
   </div>
@@ -22,13 +19,11 @@
 import Team from './team'
 import Todo from './todo'
 import Progress from './progress'
-import mobileTeam from './mobileTeam'
 export default {
   components: {
     Team,
     Todo,
     Progress,
-    mobileTeam,
   },
 }
 </script>

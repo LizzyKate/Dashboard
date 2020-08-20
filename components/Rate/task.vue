@@ -1,12 +1,15 @@
 <template>
   <div
-    class="lg:flex lg:flex-row block lg:justify-between lg:items-center mt-6"
+    class="lg:flex md:flex md:flex-wrap md:-mx-5 lg:flex-row block lg:justify-between lg:items-center mt-6 lg:-mx-5"
   >
-    <div v-for="(con, i) in property" :key="i">
+    <div
+      v-for="(con, i) in property"
+      :key="i"
+      class="lg:w-1/4 md:w-1/2 lg:px-5 w-full md:px-5"
+    >
       <div
-        class="p-4 text-white flex flex-col mt-0 card"
+        class="p-4 text-white flex flex-col lg:mt-0 card mt-4"
         :class="con.gradient"
-        :style="{ width: changed ? '13rem' : '16rem' }"
       >
         <div class="flex flex-row justify-between items-center">
           <div class="flex-grow">

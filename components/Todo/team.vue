@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div
-      class="card card-deck bg-white flex flex col"
-      :style="{ width: changed ? '18rem' : '23rem' }"
-    >
+    <div class="card bg-white flex flex col">
       <div class="p-4">
         <h5 class="text-default font-semibold text-base">Team Members</h5>
       </div>
