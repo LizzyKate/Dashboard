@@ -25,7 +25,7 @@
         </div>
         <div class="ml-4">
           <button
-            class="btn btn-secondary btn-sm btn-secondary-sec focus:border-0 px-4 hover:text-primary"
+            class="btn btn-secondary btn-sm btn-secondary-sec focus:border-0 px-4 hover:text-default"
           >
             Filters
           </button>

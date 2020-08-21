@@ -99,13 +99,12 @@
 }
 
 .btn-secondary {
-
   background-color: #f7fafc;
   border-color: #f7fafc;
 }
 
 .btn-secondary-sec {
-  color: #212529;
+  color: var(--primary);
 }
 
 .btn-info,
@@ -262,4 +261,13 @@
 
 .form {
   color: #F3A4B5;
+}
+
+.progressing {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+#identity .target {
+  display: none !important;
 }
