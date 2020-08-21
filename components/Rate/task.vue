@@ -50,7 +50,14 @@
         <div>
           <h6 class="font-base font-semibold">{{ con.rate }}</h6>
         </div>
-        <div>hi</div>
+        <div
+          class="flex progress rounded h-1 my-4 bg-gray-200 overflow-hidden shadow"
+        >
+          <div
+            class="shadow-none rounded-none h-auto bg-success"
+            :class="con.width"
+          ></div>
+        </div>
         <div>
           <h6 class="font-xs font-semibold">{{ con.full }}</h6>
         </div>
@@ -95,5 +102,8 @@ export default {
 }
 .gradientDe {
   background: linear-gradient(87deg, #172b4d, #1a174d);
+}
+.progress {
+  max-width: 12rem;
 }
 </style>

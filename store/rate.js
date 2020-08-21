@@ -6,6 +6,7 @@ export const state = () => ({
       rate: 8 + '/' + 26,
       full: 'See Details',
       open: false,
+      width: 'w-1/4',
       gradient: 'gradientD',
     },
     {
@@ -14,6 +15,7 @@ export const state = () => ({
       rate: 123 + '/' + 127,
       full: 'See Details',
       open: false,
+      width: 'w-1/2',
       gradient: 'gradientP',
     },
     {
@@ -22,6 +24,7 @@ export const state = () => ({
       rate: 200 + '/' + 300,
       full: 'See Details',
       open: false,
+      width: 'w-3/4',
       gradient: 'gradientI',
     },
     {
@@ -30,6 +33,7 @@ export const state = () => ({
       rate: 50 + '/' + 62,
       full: 'See Details',
       open: false,
+      width: 'w-11/12',
       gradient: 'gradientDe',
     },
   ],

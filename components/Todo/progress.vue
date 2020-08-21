@@ -12,16 +12,24 @@
           <div class="">
             <i class="text-2xl" :class="track.font"></i>
           </div>
-          <div class="ml-8 flex flex-col">
+          <div class="ml-8 flex flex-col w-full">
             <div>
               <h6 class="text-gray-800 font-sm font-semibold">
                 {{ track.title }}
               </h6>
             </div>
-            <div class="">
+            <!-- <div class="">
               <p class="font-xs text-gray-700 font-light">
                 hi
               </p>
+            </div> -->
+            <div
+              class="flex progress rounded h-1 bg-gray-200 overflow-hidden shadow"
+            >
+              <div
+                class="shadow-none rounded-none h-auto"
+                :class="[track.width, track.color]"
+              ></div>
             </div>
           </div>
         </div>
@@ -40,31 +48,41 @@ export default {
         {
           font: ' text-gray-800 fab fa-bootstrap',
           title: 'Argon Design System',
-          color: '',
+          color: 'bg-warning',
+          width: 'w-7/12',
         },
         {
           font: 'text-danger fab fa-angular',
           title: 'Angular Now UI Kit PRO',
-          color: '',
+          color: 'bg-success',
+          width: 'w-full',
         },
         {
           font: 'text-yellow-500 fab fa-python',
           title: 'Black Dasboard',
-          color: '',
+          color: 'bg-danger',
+          width: 'w-8/12',
         },
         {
           font: 'text-info fab fa-react',
           title: 'React Material Dashboard',
-          color: '',
+          color: 'bg-info',
+          width: 'w-11/12',
         },
         {
           font: 'text-success fab fa-vuejs',
           title: 'Vue Paper UI Kit PRO',
-          color: '',
+          color: 'bg-success',
+          width: 'w-full',
         },
       ],
     }
   },
 }
 </script>
-<style scoped></style>
+<style scoped>
+.progress {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+</style>
