@@ -28,11 +28,80 @@
           />
         </GmapMap>
       </div>
+      <div class="p-5 mt-4">
+        <div
+          v-for="(point, i) in map"
+          :key="i"
+          class="flex flex-row justify-between items-center mt-4"
+        >
+          <div>
+            <i :class="point.font"></i>
+          </div>
+          <div class="flex flex-col items-center">
+            <div>
+              <p class="text-gray-800 text-sm">{{ point.world }}</p>
+            </div>
+            <div>
+              <p class="text-default text-sm font-bold">{{ point.place }}</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div>
+              <p class="text-gray-800 text-sm">{{ point.go }}</p>
+            </div>
+            <div>
+              <p class="text-default text-sm font-bold">{{ point.no }}</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div>
+              <p class="text-gray-800 text-sm">{{ point.land }}</p>
+            </div>
+            <div>
+              <p class="text-default text-sm font-bold">{{ point.percent }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      map: [
+        {
+          font: 'fas fa-flag-usa',
+          world: 'Country :',
+          place: 'United States',
+          go: 'Visits',
+          no: 2500,
+          land: 'Bounce',
+          percent: 30 + '%',
+        },
+        {
+          font: 'fas fa-flag-usa',
+          world: 'Country :',
+          place: 'Germany',
+          go: 'Visits',
+          no: 2500,
+          land: 'Bounce',
+          percent: 30 + '%',
+        },
+        {
+          font: 'fas fa-flag-usa',
+          world: 'Country :',
+          place: 'Great Britain',
+          go: 'Visits',
+          no: 2500,
+          land: 'Bounce',
+          percent: 30 + '%',
+        },
+      ],
+    }
+  },
+}
 </script>
 <style scoped>
 .map {
@@ -44,34 +113,4 @@ export default {}
     width: 210px !important;
   }
 }
-/* @media screen and (max-width: 405px) {
-  .map {
-    width: 292px !important;
-  }
-} */
-/* @media screen and (min-width: 410px) {
-  .map {
-    width: 343px;
-  }
-} */
-/* @media screen and (max-width: 460px) {
-  .map {
-    width: 376px;
-  }
-} */
-/* @media screen and (max-width: 330px) {
-  .map {
-    width: 250px !important;
-  }
-} */
-/* @media screen and (min-width: 768px) {
-  .map {
-    width: 694px !important;
-  }
-} */
-/* @media screen and (min-width: 1024px) {
-  .map {
-    width: 951px !important;
-  }
-} */
 </style>
