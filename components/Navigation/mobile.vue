@@ -40,7 +40,7 @@
 
             <div
               v-show="open"
-              class="origin-top-right second z-30 absolute mt-10 add rounded-md shadow-lg"
+              class="origin-top-right second z-50 absolute mt-10 add rounded-md shadow-lg"
             >
               <div class="rounded-md bg-white shadow-xs">
                 <div
@@ -117,7 +117,7 @@
 
             <div
               v-show="close"
-              class="origin-top-right absolute z-30 adding third mt-10 rounded-md shadow-lg"
+              class="origin-top-right absolute z-50 adding third mt-10 rounded-md shadow-lg"
             >
               <div class="rounded-md bg-default shadow-xs">
                 <div

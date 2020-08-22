@@ -1,11 +1,13 @@
 <template>
   <div>
-    <div class="lg:flex lg:flex-row lg:justify-between lg:items-center block">
-      <div class="flex-grow">
-        <Tabled />
+    <div
+      class="lg:flex lg:flex-row lg:justify-between lg:items-center block mt-6 mb-8"
+    >
+      <div class="flex-grow lg:-mx-5">
+        <Tabled class="lg:px-5" />
       </div>
-      <div>
-        <Map />
+      <div class="lg:w-1/3 w-full lg:-mx-5 lg:mt-0 mt-5">
+        <Map class="lg:px-5" />
       </div>
     </div>
   </div>

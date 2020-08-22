@@ -43,7 +43,7 @@ export default {
             // barPercentage: 0.5,
             // barThickness: 6,
             maxBarThickness: 15,
-            // radius: 3,
+            barradius: 3,
           },
         ],
       },
