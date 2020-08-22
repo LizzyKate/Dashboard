@@ -67,7 +67,7 @@ export default {
         },
       ],
       detail: '',
-      title: 'Progress Track',
+      title: 'Progress track',
       click: '',
     }
   },

@@ -6,7 +6,7 @@
           <p class="text-gray-600 font-light text-xs">OVERVIEW</p>
         </div>
         <div>
-          <h5 class="text-default font-semibold text-base">Sales Value</h5>
+          <h5 class="text-default font-semibold text-base">Sales value</h5>
         </div>
       </div>
       <div
@@ -41,7 +41,7 @@ export default {
             data: [0, 20, 10, 30, 15, 40, 20, 60],
             backgroundColor: 'transparent',
             borderColor: '#5e72e4',
-            labelsColor: 'red',
+            // labelsColor: 'red',
           },
         ],
       },

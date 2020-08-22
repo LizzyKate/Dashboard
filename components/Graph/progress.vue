@@ -44,7 +44,7 @@ export default {
         },
       ],
       detail: 5 + '/' + 23 + ' PROJECTS',
-      title: 'Progress Track',
+      title: 'Progress track',
       click: 'Action',
     }
   },
