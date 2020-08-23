@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div
-      class="lg:flex lg:flex-row lg:justify-between lg:items-center block mt-6 mb-8"
-    >
+    <div class="lg:flex lg:flex-row lg:justify-between block mt-6 mb-8">
       <div class="flex-grow lg:-mx-5">
         <Tabled class="lg:px-5" />
       </div>
